@@ -4,8 +4,8 @@ Agent skill for safe Flagsmith feature flag rollouts, token-efficient flag inspe
 
 ## Measured Token Efficiency
 - **Raw Flagsmith JSON:** 447 chars (~112 tokens)
-- **Filtered jq Output:** 120 chars (~30 tokens)
-- **Reduction:** ~73.2% fewer context tokens using scripts/filter-flags.jq
+- **Filtered jq Output:** 47 chars (~12 tokens)
+- **Reduction:** ~89.5% fewer context tokens using scripts/filter-flags.jq
 
 ## Repository Structure
 - SKILL.md - Agent skill instructions, production approval gate, and rollback rules
@@ -15,5 +15,5 @@ Agent skill for safe Flagsmith feature flag rollouts, token-efficient flag inspe
 - scripts/check-flag.jq - Evaluates whether a specific feature flag is enabled
 
 ## Quick Usage
-.\scripts\token-estimate.ps1 -EnvKey "YvWmzvNNfxEXWRRyNg29cw"
-.\scripts\check-health.ps1 -FeatureName "YOUR_FEATURE_NAME" -EnvKey "YvWmzvNNfxEXWRRyNg29cw"
+.\scripts\token-estimate.ps1 -EnvKey "YOUR_ENV_KEY"
+.\scripts\check-health.ps1 -FeatureName "show_demo_button" -EnvKey "YOUR_ENV_KEY"
